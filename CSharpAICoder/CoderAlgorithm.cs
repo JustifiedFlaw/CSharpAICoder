@@ -44,7 +44,15 @@ namespace CSharpAICoder
 		public List<MethodInfo> Generate(int length)
 		{
 			List<MethodInfo> methods = new List<MethodInfo>();
-			for (int i = 0; i < length; i++) methods.Add(PossibleMethods[r.Next(0, PossibleMethods.Length)]);
+			for (int i = 0; i < length; i++)
+			{
+				var m = PossibleMethods[r.Next(0, PossibleMethods.Length)];
+				foreach (var pi in m.GetParameters())
+				{
+					
+				}
+				methods.Add(m);
+			}
 			return methods;
 		}
 
