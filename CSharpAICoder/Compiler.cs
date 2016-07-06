@@ -21,7 +21,7 @@ namespace ConsoleApplication2
 		{
 			Assemblies = new List<string>();
 			Assemblies.Add(code);
-			Assemblies.Add(File.ReadAllText(@"C:\Users\beaulieue\Documents\Projects\Current\ConsoleApplication2\ConsoleApplication2\SimpleCodeLv1.cs"));
+			Assemblies.Add(File.ReadAllText(@"C:\Users\beaulieue\Documents\Projects\Current\ConsoleApplication2\CSharpAICoder\SimpleCodeLv1.cs"));
 			PathToAssembly = name + ".exe";
 
 			Compile();

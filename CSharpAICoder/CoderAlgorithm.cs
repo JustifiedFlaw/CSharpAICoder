@@ -23,7 +23,7 @@ namespace ConsoleApplication2
 		}
 
 		public int IterationCount { get; set; }
-		public int PopulationCount { get; set; } = 50;
+		public int PopulationCount { get; set; } = 10;
 
 		public string Goal { get; private set; }
 
