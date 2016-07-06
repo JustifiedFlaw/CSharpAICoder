@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication2
+namespace CSharpAICoder
 {
 	class Program
 	{
@@ -15,7 +15,7 @@ namespace ConsoleApplication2
 
 //			var app = new App("test", @"
 //using System;
-//using ConsoleApplication2;
+//using CSharpAICoder;
 
 //namespace CoderAlgorithm
 //{

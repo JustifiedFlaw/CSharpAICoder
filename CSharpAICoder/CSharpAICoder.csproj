@@ -44,8 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Coder.cs" />
     <Compile Include="CoderAlgorithm.cs" />
+    <Compile Include="CodeWrap.cs" />
     <Compile Include="Compiler.cs" />
     <Compile Include="GeneticAlgorithm.cs" />
     <Compile Include="Program.cs" />

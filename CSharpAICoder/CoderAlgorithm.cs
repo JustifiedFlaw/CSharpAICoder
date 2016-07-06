@@ -6,21 +6,13 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication2
+namespace CSharpAICoder
 {
 	public class CoderAlgorithm
 	{
 		public MethodInfo[] PossibleMethods { get; set; }
 
 		Random r = new Random();
-
-		public class CodeWrap
-		{
-			public string Code { get; internal set; }
-			public List<MethodInfo> Methods { get; internal set; }
-			public double Fitness { get; internal set; }
-			public string Output { get; internal set; }
-		}
 
 		public int IterationCount { get; set; }
 		public int PopulationCount { get; set; } = 10;
@@ -44,7 +36,7 @@ namespace ConsoleApplication2
 			catch(Exception ex) { }
 
 			double score = 0;
-			for (int i = 0; i < Goal.Length && i < cw.Output.Length; i++)
+			for (int i = 0; i < Goal.Length && i < cw.Output?.Length; i++)
 				if (cw.Output[i].CompareTo(Goal[i]) == 0) score++;
 			return score / Goal.Length;
 		}
@@ -93,7 +85,8 @@ namespace ConsoleApplication2
 			var fitnesses = new List<CodeWrap>();
 			foreach (var p in population)
 			{
-				var cw = new CodeWrap() { Code = Coder.WriteCode(p) };
+				var cw = new CodeWrap() { Methods = p };
+				cw.WriteCode();
 				cw.Fitness = fitness.Invoke(cw);
 				fitnesses.Add(cw);
 			}

@@ -1,5 +1,5 @@
 ﻿using System;
-using ConsoleApplication2;
+using CSharpAICoder;
 
 namespace CoderAlgorithm
 {

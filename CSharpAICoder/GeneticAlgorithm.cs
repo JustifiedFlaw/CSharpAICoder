@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication2
+namespace CSharpAICoder
 {
 	class GeneticAlgorithm<T> where T : IComparable
 	{
